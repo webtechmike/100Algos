@@ -5,11 +5,11 @@ function allLongestStrings(inputArray: string[]): string[] {
 
   let longestIndex = 0;
 
-  for (let i = 0; i < inputArray.length; i++) {
-    if(inputArray[i].length > inputArray[longestIndex].length) {
-      longestIndex = i;
+  inputArray.forEach((input, index) => {
+    if(input.length > inputArray[longestIndex].length) {
+      longestIndex = index;
     }
-  }
+  });
 
   return inputArray.filter((str) => str.length === inputArray[longestIndex].length);
 }
@@ -18,4 +18,4 @@ console.log(allLongestStrings(["aba", "aa", "ad", "vcd", "aba"]));
 console.log(allLongestStrings(["affdba", "aa", "ad", "vcd", "aba"]));
 console.log(allLongestStrings(["affdba", "aa", "ad", "vcd", "abdfaaa"]));
 console.log(allLongestStrings(["aba", "afdaa", "affffd", "vfffcd", "aba"]));
-console.log(allLongestStrings(["aba", "aa", "ad", "vcdd", "aadba"]));
+console.log(allLongestStrings(["aba", "aa", "ad", "vcdd", "adba"]));
