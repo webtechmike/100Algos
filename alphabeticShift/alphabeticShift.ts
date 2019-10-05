@@ -3,8 +3,8 @@ function alphabeticShift(inputString: string): string {
   // initialize an empty string to store result of shifting letters
   // iterate inputString and append output string with next value in alphabet string
   // return output string
-  let alphabet = 'abcdefghijklmnopqrstuvwxyz';
-  let output = '';
+  const alphabet: string = 'abcdefghijklmnopqrstuvwxyz';
+  let output: string = '';
 
   inputString.split('').forEach((letter, index) => {
     let location = alphabet.indexOf(letter);
