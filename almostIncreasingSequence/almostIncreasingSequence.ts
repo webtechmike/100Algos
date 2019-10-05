@@ -19,5 +19,7 @@ function almostIncreasingSequence(sequence: number[]): boolean {
 
 console.log(almostIncreasingSequence([1, 3, 2, 4])) 
 console.log(almostIncreasingSequence([1, 3, 2])) 
+console.log(almostIncreasingSequence([1, 3, 2, 3])) 
+console.log(almostIncreasingSequence([1, 3, 2, 4, 5, 6, 5])) 
 console.log(almostIncreasingSequence([1, 3, 2, 1])) 
 console.log(almostIncreasingSequence([1, 3, 4, 5, 2, 1])) 
