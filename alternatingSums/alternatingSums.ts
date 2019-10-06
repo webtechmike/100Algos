@@ -1,22 +1,18 @@
 function alternatingSums(a: number[]): number[] {
-  let teamA = [];
-  let teamB = [];
-  let result = [];
+  let teamA = 0;
+  let teamB = 0;
 
   a.map((t, i) => {
     if(i % 2 === 0) {
-      teamA.push(t)
+      teamA += t;
     } else {
-      teamB.push(t)
+      teamB += t
     }
   });
 
   console.log(teamA, teamB);
 
-  result.push(teamA.reduce((acc, current) => acc+current))
-  result.push(teamB.reduce((acc, current) => acc+current))
-
-  return result;
+  return [teamA, teamB];
 }
 
 console.log(alternatingSums([50, 60, 60, 45, 70]))
