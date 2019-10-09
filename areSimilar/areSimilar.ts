@@ -9,26 +9,26 @@ function areSimilar(a: number[], b: number[]): boolean {
   if (a.length !== b.length) {
     return false;
   } else {
+    console.log(mistakes);
+
     a.forEach((num, index) => {
-      console.log(num);
-      console.log(b[index]);
       if (b.indexOf(num) === -1) {
         return false;
       } else {
-        // might be true
         // check if order of elements is the same
         // if 2 or more elements are out of order return false else true
         if (num !== b[index]) {
           mistakes += 1;
         }
-
-        if (mistakes >= 2) {
-          return false;
-        } else {
-          return true;
-        }
       }
     });
+    
+    if (mistakes >= 2) {
+      console.log(mistakes);
+      return false;
+    } else {
+      return true;
+    }
   }
 }
 
